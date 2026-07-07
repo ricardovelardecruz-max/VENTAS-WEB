@@ -1,0 +1,16 @@
+{
+  "name": "ventas-app",
+  "version": "1.0.0",
+  "description": "App simple para registrar ventas de la tienda",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "express": "^4.22.2"
+  }
+}

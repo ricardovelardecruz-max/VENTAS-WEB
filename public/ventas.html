@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventas Totales</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Ventas Totales</h1>
+
+    <nav class="nav">
+      <a href="index.html">Registrar</a>
+      <a href="ventas.html" class="activo">Ventas totales</a>
+    </nav>
+
+    <div class="totales">
+      <div class="tarjeta">
+        <span class="etiqueta">Entradas de dinero</span>
+        <span class="valor" id="totalEntradas">$0.00</span>
+      </div>
+      <div class="tarjeta">
+        <span class="etiqueta">Salidas de dinero</span>
+        <span class="valor" id="totalSalidas">$0.00</span>
+      </div>
+      <div class="tarjeta">
+        <span class="etiqueta">Balance</span>
+        <span class="valor" id="totalMonto">$0.00</span>
+      </div>
+      <div class="tarjeta">
+        <span class="etiqueta">Unidades</span>
+        <span class="valor" id="totalCantidad">0</span>
+      </div>
+      <div class="tarjeta">
+        <span class="etiqueta">N de movimientos</span>
+        <span class="valor" id="totalVentas">0</span>
+      </div>
+    </div>
+
+    <h2>Entradas vs Salidas</h2>
+    <div class="grafica-contenedor">
+      <canvas id="graficaMovimientos"></canvas>
+    </div>
+
+    <h2>Historial de movimientos</h2>
+    <table id="tablaVentas">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Tipo</th>
+          <th>Cantidad</th>
+          <th>Monto</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla">
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    .grafica-contenedor {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-entrada {
+      background: #e6f7ec;
+      color: #1e7e34;
+    }
+    .badge-salida {
+      background: #fdeaea;
+      color: #c0392b;
+    }
+    .monto-entrada { color: #1e7e34; }
+    .monto-salida { color: #c0392b; }
+  </style>
+
+  <script src="app.js"></script>
+</body>
+</html>

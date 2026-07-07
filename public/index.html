@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GARICLIKA</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>GARICLIKA</h1>
+
+    <nav class="nav">
+      <a href="index.html" class="activo">Registrar</a>
+      <a href="ventas.html">Ventas totales</a>
+    </nav>
+
+    <form id="formVenta">
+      <label for="tipo">Tipo de movimiento</label>
+      <select id="tipo" name="tipo">
+        <option value="entrada">Entrada de dinero (venta / ingreso)</option>
+        <option value="salida">Salida de dinero (gasto / retiro)</option>
+      </select>
+
+      <label for="cantidad">Cantidad</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" step="1" >
+
+      <label for="monto">Monto ($)</label>
+      <input type="number" id="monto" name="monto" min="0" step="0.01" >
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    <div id="mensaje" class="mensaje"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
