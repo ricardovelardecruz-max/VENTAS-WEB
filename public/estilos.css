@@ -4,7 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+  background: #000000;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #222;
+  color: #fffb04;
 }
 
 .nav {
@@ -31,7 +31,7 @@ h1 {
   text-align: center;
   padding: 12px;
   background: #ddd;
-  color: #333;
+  color: #333333;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -39,14 +39,14 @@ h1 {
 
 .nav a.activo {
   background: #2e7d32;
-  color: white;
+  color: rgb(255, 217, 0);
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: white;
+  background: rgb(255, 217, 3);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -60,7 +60,7 @@ label {
 input {
   padding: 14px;
   font-size: 18px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 8px;
   width: 100%;
 }
@@ -69,7 +69,7 @@ button {
   padding: 16px;
   font-size: 18px;
   background: #2e7d32;
-  color: white;
+  color: rgb(245, 229, 5);
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -105,7 +105,7 @@ button:active {
 }
 
 .tarjeta {
-  background: white;
+  background: rgb(255, 230, 0);
   padding: 16px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -153,4 +153,8 @@ th {
   padding: 6px 10px;
   font-size: 12px;
   cursor: pointer;
+}
+.titulo-amarillo {
+  color: yellow;
+  background: #000000;
 }
