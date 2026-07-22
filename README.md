@@ -1,6 +1,6 @@
 # Control de ventas web
 
-[![CI](https://github.com/ricardovelardecruz-max/VENTAS-WEB/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardovelardecruz-max/VENTAS-WEB/actions/workflows/ci.yml)
+[![CI](https://github.com/ricardovelardecruz/VENTAS-WEB/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardovelardecruz/VENTAS-WEB/actions/workflows/ci.yml)
 ![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -30,7 +30,7 @@ Aplicación web adaptable a celular y computadora para registrar entradas y sali
 Necesitas Node.js 20 o una versión posterior.
 
 ```bash
-git clone https://github.com/ricardovelardecruz-max/VENTAS-WEB.git
+git clone https://github.com/ricardovelardecruz/VENTAS-WEB.git
 cd VENTAS-WEB
 npm install
 copy .env.example .env
