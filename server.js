@@ -44,6 +44,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Rutas API ---
 
+// Comprobación sencilla para monitoreo y despliegues.
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 // Registrar una venta nueva
 app.post('/api/ventas', async (req, res) => {
   try {
@@ -128,8 +133,18 @@ app.delete('/api/ventas/:id', async (req, res) => {
   }
 });
 
-iniciarDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
+async function startServer(port = PORT) {
+  await iniciarDB();
+  return app.listen(port, () => {
+    console.log(`Servidor corriendo en el puerto ${port}`);
   });
-});
+}
+
+if (require.main === module) {
+  startServer().catch((error) => {
+    console.error('No se pudo iniciar el servidor:', error);
+    process.exitCode = 1;
+  });
+}
+
+module.exports = { app, iniciarDB, startServer };
